@@ -6,8 +6,6 @@ Created on Tue Oct 27 11:00:27 2020
 @author: noestaeheli
 """
 
-import random
-
 from guess_my_number import MIN, MAX,  GuessMachine
 
 if __name__ == '__main__':
@@ -15,7 +13,7 @@ if __name__ == '__main__':
     Max = MAX
     guess_machine=GuessMachine()
     while True:
-        attempt=random.randint(Min,Max)
+        attempt=int((Min+Max)/2)
         result=guess_machine.guess(attempt)
         print('tried %d: %s' %(attempt,result))
         if result == 'found':
